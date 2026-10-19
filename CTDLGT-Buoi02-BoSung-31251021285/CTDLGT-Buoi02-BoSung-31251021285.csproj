@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Bai3\" />
     <Folder Include="Bai4\" />
   </ItemGroup>
 
