@@ -11,7 +11,6 @@
   <ItemGroup>
     <Folder Include="Bai3\" />
     <Folder Include="Bai4\" />
-    <Folder Include="Bai2\" />
   </ItemGroup>
 
 </Project>
