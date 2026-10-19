@@ -8,7 +8,7 @@ namespace Bai1
     internal class Bai1
     {
         
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             // 1. Đọc số n ở dòng đầu tiên
@@ -27,11 +27,13 @@ namespace Bai1
             int am = 0;
             int duong = 0;
             int zero = 0;
-            // 3. Duyệt qua từng số vừa tách
+            // 3. Duyệt qua từng số
             for (int i = 0; i < n; i++)
             {
 
                 sum += a[i];
+                if (a[i] > max) max = a[i];
+                if (a[i] < min) min = a[i];
                 if (a[i] < 0)
                 {
                     am++;
@@ -47,12 +49,12 @@ namespace Bai1
             }
             //Thống kê:
             // 4. Tính trung bình bằng decimal và làm tròn ra xa 0 theo gợi ý của đề
-            decimal ave = (decimal)sum / n;
-            decimal roundedAve = Math.Round(ave, 2);
-            Console.WriteLine(max);
-            Console.WriteLine(min);
-            Console.WriteLine(sum);
-            Console.WriteLine(roundedAve.ToString("0.00", CultureInfo.InvariantCulture));
+            decimal ave = (decimal)sum / n; //dùng decimal để tránh tràn số
+            decimal roundedAve = Math.Round(ave, 2); //làm tròn 2 chữ số thập phân
+            Console.WriteLine($"Phần tử lớn nhất:{max}");
+            Console.WriteLine($"Phần tử nhỏ nhất:{min}");
+            Console.WriteLine($"Tổng:{sum}");
+            Console.WriteLine($"Trung bình:{roundedAve}");
             Console.WriteLine($"Số phần tử âm:{am}");
             Console.WriteLine($"Số phần tử dương:{duong}");
             Console.WriteLine($"Số phần tử bằng 0:{zero}");
