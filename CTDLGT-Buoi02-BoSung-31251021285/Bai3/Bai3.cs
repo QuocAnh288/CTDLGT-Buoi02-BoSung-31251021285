@@ -12,19 +12,6 @@ namespace CTDLGT_Buoi02_BoSung_31251022334
     - SV104: Pham Minh Chau  - Diem: 7.25  (diem le)
     - SV105: Hoang Anh Tuan  - Diem: 10    (bien tren)
     - SV106: Nguyen Thi Hoa  - Diem: 4.99  (sat moc dat, trung ten "Hoa")
-
-    KET QUA MONG DOI KHI CHON CHUC NANG 5:
-    - Tong diem = 31.74, so SV = 6  ->  Diem trung binh = 5.29
-    - So SV dat (>= 5) = 3/6  (SV103, SV104, SV105)
-
-    CAC TINH HUONG NEN THU THEM:
-    - Tim "hoa" hoac "HOA"  -> ra SV101 va SV106 (khong phan biet hoa thuong)
-    - Tim "nguyen"          -> ra SV101 va SV106
-    - Them ma "sv103"       -> bao trung ma (khong phan biet hoa thuong)
-    - Them diem 10.5, -1, "abc" -> bi tu choi
-    - Nhap diem "8,5" va "8.5"  -> deu duoc chap nhan
-    - Xoa het 6 SV roi chon 5   -> bao danh sach rong, khong loi chia cho 0
-    - Nhap chu o menu           -> bao loi, khong thoat chuong trinh
     */
 
     // Lop Student chua thong tin sinh vien
@@ -250,7 +237,7 @@ namespace CTDLGT_Buoi02_BoSung_31251022334
             list.Add(new Student("SV106", "Nguyen Thi Hoa", 4.99));
         }
 
-        static void Main(string[] augs)
+        static void Main3(string[] augs)
         {
             List<Student> danhSach = new List<Student>();
             NapDuLieuMau(danhSach);
